@@ -12,3 +12,6 @@ This is a big issue caused by coding with complex nested callbacks. Here, each a
 * Run `node with_callbacks.js` to run the code without callbacks using async/await
 * Refer [MDN Async_await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await) for more
 
+
+### How to make callback-based functions return a promise
+Wrap the function in another function which returns a promise. It then resolves or rejects based on callback arguments. 
