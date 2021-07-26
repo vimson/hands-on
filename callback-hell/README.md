@@ -15,3 +15,15 @@ This is a big issue caused by coding with complex nested callbacks. Here, each a
 
 ### How to make callback-based functions return a promise
 Wrap the function in another function which returns a promise. It then resolves or rejects based on callback arguments. 
+
+Example:
+```javascript
+function fetchAPI(url) {
+  return new Promise((resolve, reject) => {
+    request(url, function (err, res, body) {
+      if (err) reject(err);
+      else resolve(JSON.parse(body));
+    });
+  });
+}
+```
